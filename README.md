@@ -38,6 +38,16 @@ A Claude desktop or mobile app that draws a mod's theme. The terminal and editor
 - With reduced motion on, the rain rests as a still picture.
 - It has been used by its author on one Windows machine. Other setups are untested.
 
+## What its hooks do
+
+The mod is one hooks module, `hooks/register.tsx`, with three hooks:
+
+- `session.start`: reads the context usage once, then sets the theme (the colors and the backdrop) with `$.theme.set`. If the app cannot draw the theme, it puts the reason in the status line.
+- `session.append` on replies: after each block of Claude's reply, reads the context usage again and stores it as a number from 0 to 100. It does not read or change the reply, and a failed reading never holds a reply back.
+- `ui.render` on the backdrop: draws the rain as an SVG, with the pile at the stored height. It answers only for its own scene, on the desktop and mobile apps.
+
+It registers no commands or tools, runs no processes, and reads or writes no files.
+
 ## What it reads
 
 The session's context usage percentage, through `$.session.usage()`. It reads no prompt or reply text and sends nothing anywhere.
