@@ -1,0 +1,8 @@
+{
+  "name": "matrix-rain",
+  "version": "0.2.0",
+  "description": "A dark green look with slow binary rain behind the chat, piling up at the foot as the context window fills.",
+  "author": { "name": "AIEngineerX" },
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}
