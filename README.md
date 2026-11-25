@@ -2,6 +2,10 @@
 
 A Claude Code mod that paints slow binary rain behind the chat in the Claude desktop app, and stacks a pile of settled digits from the bottom of the window as the context window fills.
 
+![Columns of green binary digits on a dark screen, with a pile of brighter digits filling the bottom two fifths](docs/preview.png)
+
+The scene by itself, with the context window 40% full. In the app it sits behind the conversation, under the app's frosted panels.
+
 ## What it does
 
 - Sets a dark, phosphor-green color theme for the session.
